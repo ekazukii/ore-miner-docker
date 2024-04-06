@@ -31,12 +31,12 @@ if [ -z "$PRIORITY_FEE" ]; then
 fi
 
 # Create the id.json file with the ID_KEY environment variable as its content
-echo "$ID_KEY" > /path/to/created/id.json
+echo "$ID_KEY" > /tmp/id.json
 
 # Infinite loop to keep the script running
 while true; do
     # Run the ore-cli command with the required parameters
-    ore --rpc $RPC --keypair /path/to/created/id.json --priority-fee 
+    ore --rpc $RPC --keypair /tmp/id.json --priority-fee 
 $PRIORITY_FEE mine
 
     echo "ore-cli crashed with exit code $?. Respawning.."
