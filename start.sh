@@ -36,8 +36,7 @@ echo "$ID_KEY" > /tmp/id.json
 # Infinite loop to keep the script running
 while true; do
     # Run the ore-cli command with the required parameters
-    ore --rpc $RPC --keypair /tmp/id.json --priority-fee 
-$PRIORITY_FEE mine
+    ore --rpc $RPC --keypair /tmp/id.json --priority-fee $PRIORITY_FEE mine
 
     echo "ore-cli crashed with exit code $?. Respawning.."
     sleep 1
