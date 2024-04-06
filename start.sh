@@ -30,8 +30,7 @@ if [ -z "$PRIORITY_FEE" ]; then
     exit 1
 fi
 
-# Create the id.json file with the ID_KEY environment variable as its 
-content
+# Create the id.json file with the ID_KEY environment variable as its content
 echo "$ID_KEY" > /path/to/created/id.json
 
 # Infinite loop to keep the script running
